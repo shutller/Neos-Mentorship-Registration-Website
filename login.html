@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Neos – Login / Register</title>
-<link rel="stylesheet" href="login.css">
-<a href="neos.html"></a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neos – Login / Register</title>
+    <link rel="stylesheet" href="login.css">
+    <a href="neos.html"></a>
 </head>
 <body>
+    <div class="container">
+        <h2 id="formTitle">Login</h2>
 
-<div class="container">
-  <h2 id="formTitle">Login</h2>
+        <form id="authForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
 
-  <form id="authForm">
-    <label>Email</label>
-    <input type="email" id="email" required>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" required>
+                    <span class="toggle-password" data-target="password">👁️</span>
+                </div>
+            </div>
 
-    <label>Password</label>
-    <input type="password" id="password" required>
-     <span class="toggle-password" data-target="password">👁️</span>
+            <div id="extraField" class="hidden">
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="confirmPassword">
+                        <span class="toggle-password" data-target="confirmPassword">👁️</span>
+                    </div>
+                </div>
+            </div>
 
-    <div id="extraField" class="hidden">
-      <label>Confirm Password</label>
-       <div class="password-wrapper">
-      <input type="password" id="confirmPassword">
-      <span class="toggle-password" data-target="confirmPassword">👁️</span>
-  </div>
+            <button type="submit" id="submitBtn">Login</button>
+
+            <p id="toggleText">
+                Don't have an account? 
+                <a href="#" id="toggleLink">Register here</a>
+            </p>
+
+            <p id="message"></p>
+        </form>
     </div>
 
-    <button type="submit" id="submitBtn">Login</button>
-
-    <p id="toggleText">
-      Don’t have an account? 
-      <a href="#" id="toggleLink">Register here</a>
-    </p>
-
-    <p id="message"></p>
-  </form>
-</div>
-
-<script src="login.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

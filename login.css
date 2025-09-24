@@ -1,99 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f3f3f3;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 h2 {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
 }
 
 label {
-  display: block;
-  margin-top: 15px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
 }
 
 input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
 }
 
 button {
-  width: 100%;
-  margin-top: 20px;
-  padding: 10px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
 button:hover {
-  background: #45a049;
+    background: #45a049;
 }
 
 #toggleText {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
 }
 
 #toggleLink {
-  color: #4CAF50;
-  text-decoration: none;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #toggleLink:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 #message {
-  text-align: center;
-  margin-top: 10px;
-  color: red;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
 }
+
+.message-error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.message-success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
 .password-wrapper {
-  position: relative;
+    position: relative;
 }
 
 .password-wrapper input {
-  width: 100%;
-  padding-right: 35px; /* leave space for the icon */
+    padding-right: 40px;
 }
 
 .toggle-password {
-  position: absolute;
-  right: 350px;
-  top: 54%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  user-select: none;
-  font-size: 18px;
-  color: #666;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #666;
+    padding: 5px;
 }
 
 .toggle-password:hover {
-  color: #000;
+    color: #000;
+    background-color: #f0f0f0;
+    border-radius: 3px;
 }
