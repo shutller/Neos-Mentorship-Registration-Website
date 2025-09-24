@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neos – Login / Register</title>
     <link rel="stylesheet" href="login.css">
-    <a href="neos.html"></a>
 </head>
 <body>
     <div class="container">
@@ -23,6 +22,18 @@
                     <input type="password" id="password" required>
                     <span class="toggle-password" data-target="password">👁️</span>
                 </div>
+                <div id="passwordStrength" class="hidden">
+                    <div class="strength-meter">
+                        <div class="strength-bar"></div>
+                    </div>
+                    <div id="passwordRequirements">
+                        <p class="requirement" data-requirement="length">✓ At least 8 characters</p>
+                        <p class="requirement" data-requirement="lowercase">✓ One lowercase letter</p>
+                        <p class="requirement" data-requirement="uppercase">✓ One uppercase letter</p>
+                        <p class="requirement" data-requirement="number">✓ One number</p>
+                        <p class="requirement" data-requirement="special">✓ One special character</p>
+                    </div>
+                </div>
             </div>
 
             <div id="extraField" class="hidden">
@@ -32,6 +43,7 @@
                         <input type="password" id="confirmPassword">
                         <span class="toggle-password" data-target="confirmPassword">👁️</span>
                     </div>
+                    <div id="confirmMessage" class="confirm-message hidden"></div>
                 </div>
             </div>
 
