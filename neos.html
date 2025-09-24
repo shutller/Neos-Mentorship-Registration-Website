@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neos Membership Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ✅ Navigation -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">📖 Neos Membership</h1>
+      <ul>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#giving">Giving</a></li>
+        <li><a href="#reports">Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ Main Content -->
+  <main class="container">
+
+    <!-- Register Members -->
+    <section id="members" class="card">
+      <h2>📝 Register Member</h2>
+      <form id="memberForm">
+        <label>Full Name</label>
+        <input id="name" type="text" required>
+
+        <label>Phone</label>
+        <input id="phone" type="text" required>
+
+        <label>Email</label>
+        <input id="email" type="email" required>
+
+        <label>Location</label>
+        <input id="location" type="text">
+
+        <label>Date of Joining</label>
+        <input id="joinDate" type="date">
+
+        <label>Role in Ministry</label>
+        <select id="role">
+          <option>General Converner</option>
+          <option>Deputy Director</option>
+          <option>Chair</option>
+          <option>Vice Chair</option>
+          <option>Secretary</option>
+          <option>Treasurer</option>
+          <option>Divas Chair</option>
+          <option>Media Chair</option>
+          <option>Member</option>
+        </select>
+
+        <label>Birthday</label>
+        <input id="birthday" type="date">
+
+        <button type="submit">Register</button>
+      </form>
+      <button class="secondary" onclick="showMembers()">📋 View Members</button>
+      <div class="list" id="membersList"></div>
+    </section>
+
+    <!-- Attendance -->
+    <section id="attendance" class="card">
+      <h2>📂 Attendance & Ministry</h2>
+      <form id="attendanceForm">
+        <label>Member Name</label>
+        <input id="attName" type="text" required>
+
+        <label>Attendance Date</label>
+        <input id="attDate" type="date" required>
+
+        <label>Ministry</label>
+        <select id="ministry">
+          <option>Divas</option>
+          <option>Tech</option>
+          <option>Choir</option>
+          <option>Media</option>
+          <option>Ushering</option>
+          <option>Mission</option>
+        </select>
+
+        <label>Notes</label>
+        <textarea id="notes"></textarea>
+
+        <button type="submit">Save Attendance</button>
+      </form>
+      <button class="secondary" onclick="showAttendance()">🕒 View Attendance</button>
+      <div class="list" id="attendanceList"></div>
+    </section>
+
+    <!-- Giving -->
+    <section id="giving" class="card">
+      <h2>💰 Track Giving</h2>
+      <form id="givingForm">
+        <label>Member Name</label>
+        <input id="giveName" type="text" required>
+
+        <label>Date</label>
+        <input id="giveDate" type="date" required>
+
+        <label>Type</label>
+        <select id="giveType">
+          <option>Tithe</option>
+          <option>Offering</option>
+          <option>Weekly contribution</option>
+          <option>Monthly Support</option>
+          <option>Special Giving</option>
+        </select>
+
+        <label>Amount</label>
+        <input id="giveAmount" type="number" required>
+
+        <button type="submit">Save Giving</button>
+      </form>
+      <button class="secondary" onclick="showGiving()">💵 View Contributions</button>
+      <div class="list" id="givingList"></div>
+    </section>
+
+    <!-- Reports -->
+    <section id="reports" class="card">
+      <h2>📊 Reports</h2>
+      <button onclick="generateReports()">Generate Reports</button>
+      <div class="report" id="reportBox"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Neos Ministry. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

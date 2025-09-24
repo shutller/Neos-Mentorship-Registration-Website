@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+#toggleText {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+#toggleLink {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+#toggleLink:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+#message {
+  text-align: center;
+  margin-top: 10px;
+  color: red;
+}
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 35px; /* leave space for the icon */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 350px;
+  top: 54%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+  color: #666;
+}
+
+.toggle-password:hover {
+  color: #000;
+}
